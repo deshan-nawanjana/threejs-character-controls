@@ -107,8 +107,7 @@ new THREE.FBXLoader().load('./assets/'+ model +'/scene.fbx', model => {
     character.setActionMap({
         'idle' : {
             animation : { id : 'ani_idle' },
-            inspector : keys => !keys.W && !keys.A && !keys.S && !keys.D,
-            // callback : console.log
+            inspector : keys => !keys.W && !keys.A && !keys.S && !keys.D
         },
         'walk' : {
             animation : { id : 'ani_walk' },
@@ -126,13 +125,11 @@ new THREE.FBXLoader().load('./assets/'+ model +'/scene.fbx', model => {
         },
         'fist' : {
             animation : { id : 'ani_fist', animationLock : true, onStart : slow, onEnd : fast },
-            executor : { type : 'click', button : 0 },
-            // callback : console.log
+            executor : { type : 'click', button : 0 }
         },
         'kick' : {
             animation : { id : 'ani_kick', animationLock : true, onStart : slow, onEnd : fast },
-            executor : { type : 'click', button : 2 },
-            // callback : console.log
+            executor : { type : 'click', button : 2 }
         }
     })
 
@@ -143,9 +140,13 @@ new THREE.FBXLoader().load('./assets/'+ model +'/scene.fbx', model => {
     const render = () => {
         character.update()
         requestAnimationFrame(render)
-        // boxmove(character.model, character.object)
         renderer.render(scene, camera)
     }
+
+    // remove loader
+    document.querySelector('.loading').remove()
+
+    window.character = character
 
     // start loop
     render()

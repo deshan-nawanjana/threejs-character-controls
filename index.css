@@ -32,3 +32,18 @@ select {
     font-size: 14px;
     padding: 2px;
 }
+
+.loading {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #111;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100vh;
+    font-weight: 700;
+    color: #FFF;
+}
