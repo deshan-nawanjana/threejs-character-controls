@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <script src="./libraries/three.min.js"></script>
-    <script src="./libraries/FBXLoader.js"></script>
-    <script src="./libraries/fflate.min.js"></script>
-    <script src="./libraries/OrbitControls.js"></script>
-    <script src="./engine/InputListener.js"></script>
-    <script src="./engine/CharacterControls.js"></script>
-    <title>Three.js Character Controls | Deshan Nawanjana</title>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TPS Character Controls Module for Web 3D">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- open graph tags -->
+  <meta property="og:title" content="Three.js Character Controls">
+  <meta property="og:description" content="TPS Character Controls Module for Web 3D">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/threejs-character-controls/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/threejs-character-controls/assets/images/splash.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Three.js Character Controls">
+  <meta name="twitter:description" content="TPS Character Controls Module for Web 3D">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/threejs-character-controls/assets/images/splash.png">
+  <!-- canonical -->
+  <link rel="canonical" href="https://deshan.lk/projects/threejs-character-controls" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./index.png" type="image/png">
+  <!-- preload : images -->
+  <link rel="preload" href="./assets/images/spinner.svg" as="image" type="image/svg+xml" />
+  <!-- style -->
+  <link rel="stylesheet" href="./index.css">
+  <!-- libraries -->
+  <script src="./assets/libraries/three.min.js"></script>
+  <script src="./assets/libraries/fflate.min.js"></script>
+  <script src="./assets/libraries/FBXLoader.js"></script>
+  <script src="./assets/libraries/OrbitControls.js"></script>
+  <!-- script -->
+  <script src="./index.js" type="module" defer></script>
+  <!-- page title -->
+  <title>Three.js Character Controls</title>
 </head>
 <body>
-    <div class="loading">Loading...</div>
-    <div class="help">
-        Walk - W, A, S, D<br>
-        Sprint - Shift<br>
-        Punch - Left Click<br>
-        Kick - Right Click<br>
-        <select>
-            <option>character_1</option>
-            <option>character_2</option>
-        </select>
+  <div id="app">
+    <div class="overlay">
+      <select>
+        <option value="character_1">Character #1</option>
+        <option value="character_2">Character #2</option>
+      </select>
+      <div class="help">
+        <div>Walk - W, A, S, D</div>
+        <div>Punch - Left Click</div>
+        <div>Kick - Right Click</div>
+        <div>Sprint - Shift</div>
+      </div>
     </div>
-    <script src="./index.js"></script>
+  </div>
 </body>
 </html>

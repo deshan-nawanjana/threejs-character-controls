@@ -1,49 +1,53 @@
 * {
-    font-family: 'Courier New', Courier, monospace;
-    outline: none;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: background, color;
+  transition-duration: 0.2s;
 }
 
 body {
-    margin: 0px;
-    overflow: hidden;
-    background-color: #333;
+  background-color: #222;
+  overflow: hidden;
+  margin: 0px;
+  background-image: url(./assets/images/spinner.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80px auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#app[data-ready] {
+  opacity: 1;
 }
 
 canvas {
-    background-color: #333;
-    position: fixed;
-    z-index: 1;
-    left: 0px;
-    top: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
 }
 
-.help {
-    position: fixed;
-    z-index: 2;
-    left: 25px;
-    top: 20px;
-    color: #FFF;
-    font-size: 16px;
-}
-
-select {
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    padding: 2px;
-}
-
-.loading {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    background-color: #111;
-    font-size: 30px;
-    text-align: center;
-    line-height: 100vh;
-    font-weight: 700;
-    color: #FFF;
+.overlay {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: #FFFA;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
 }
