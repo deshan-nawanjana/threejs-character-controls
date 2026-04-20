@@ -14,7 +14,6 @@ Launch Now: [https://deshan-nawanjana.github.io/threejs-character-controls/](htt
 ## Libraries and Frameworks Used
 
 - [Three.js](https://threejs.org/) - JavaScript 3D Library
-- [Vue.js](https://vuejs.org/) - Progressive framework for building user interfaces
 
 ## Assets and Resources Used
 
